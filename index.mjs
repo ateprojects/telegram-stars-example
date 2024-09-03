@@ -7,17 +7,17 @@ const paidUsers = new Map();
 
 bot.command("start", (ctx) =>
   ctx.reply(
-    `Welcome! I am a simple bot that can accept payments via Telegram Stars. The following commands are available:
+    `¡Bienvenidos! Soy un bot simple que puede aceptar pagos a través de Telegram Stars. Los siguientes comandos están disponibles:
 
-/pay - to pay
-/status - to check payment status
-/refund - to refund payment`,
+/pay - Pagar
+/status - Para comprobar el estado del pago
+/refund - Para reembolsar el pago`,
   ),
 );
 
 bot.command("pay", (ctx) => {
-  return ctx.replyWithInvoice("Test Product", "Test description", "{}", "XTR", [
-    { amount: 1, label: "Test Product" },
+  return ctx.replyWithInvoice("Donaciones", "Realiza Una Donación para mejorar nuestros servicios Gratuitos.", "{}", "XTR", [
+    { amount: 1, label: "Donación Stars" },
   ]);
 });
 
